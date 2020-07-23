@@ -7,4 +7,17 @@ card_number = '400000844943340'
 
 def LUH(card_number):
     card = [int(num) for num in card_number]
-    card_1 = []
+    odd = True
+    sum = 0
+    for num in card:
+        if odd:
+            tmp = num * 2
+        else:
+            tmp = num
+        odd = not odd
+        if tmp > 9:
+            tmp -= 9
+        sum +=tmp
+    return str(10 - (sum % 10))
+
+print(LUH(card_number))
