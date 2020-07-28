@@ -4,7 +4,10 @@
 #добавить все номера
 
 card_number = '400000997268569'
-
+card_number1 = '4000009972685699'
+card_no_LUH = card_number1[:15]
+num_LUH = card_number1[15:]
+print(card_no_LUH, num_LUH)
 def LUH(card_number):
     card = [int(num) for num in card_number]
     odd = True
